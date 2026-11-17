@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Shark Attacks",
+    "section": "",
+    "text": "The Global Shark Attack File (GSAF) is a long-running collection of reported shark incidents. This site explores a cleaned extract covering 1901–2018.\nShark encounters can be frightening, but incident counts alone cannot tell us a person’s chance of being attacked: the records do not show how many people were in the water or for how long. Most incidents in this extract were classified as non-fatal.\nExplore the Map page to see where incidents were recorded, and Trends to compare counts over time and by activity, including fatal and non-fatal outcomes. These patterns describe reported incidents, not exposure-adjusted risk."
+  },
+  {
+    "objectID": "map.html",
+    "href": "map.html",
+    "title": "Map",
+    "section": "",
+    "text": "Rows: 5094 Columns: 15\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (14): Case_Number, Date, Type, Country, Area, Location, Activity, Name, ...\ndbl  (1): Year\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+  }
+]
