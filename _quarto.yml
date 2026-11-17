@@ -7,6 +7,11 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: map.qmd
+        text: Map
+
+execute:
+  echo: false
 
 format:
   html:
