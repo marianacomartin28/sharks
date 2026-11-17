@@ -1,0 +1,33 @@
+---
+title: "Trends"
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+attacks <- read_rds("data/attacks.rds")
+```
+
+```{r}
+attacks |>
+  filter(Fatal_clean %in% c("Fatal", "Non-fatal")) |>
+  count(Activity, Fatal_clean) |>
+  filter(sum(n) >= 50, .by = Activity) |>
+  ggplot(aes(x = n, y = fct_reorder(Activity, n, sum),
+             fill = Fatal_clean)) +
+  geom_col() +
+  scale_fill_manual(values = c("Fatal" = "#d62728", "Non-fatal" = "#1f77b4")) +
+  labs(
+    title = "Most shark attacks are not fatal",
+    subtitle = "Activities with 50 or more recorded incidents, 1901–2018",
+    x = "Number of attacks",
+    y = NULL,
+    fill = NULL,
+    caption = "Source: Global Shark Attack File (GSAF)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
